@@ -1,0 +1,6 @@
+# Production profile — activate with SPRING_PROFILES_ACTIVE=prod
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false

@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/devflow}
+    username: ${SPRING_DATASOURCE_USERNAME:devflow}
+    password: ${SPRING_DATASOURCE_PASSWORD:devflow}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      # WARNING: ddl-auto 'update' is for development only.
+      # Use 'validate' in production (see application-prod.yml).
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc.lob.non_contextual_creation: true
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+devflow:
+  jwt:
+    secret: ${DEVFLOW_JWT_SECRET:devflowSecretKey1234567890}
+    expiration-millis: 900000
+    refresh-expiration-millis: 2592000000
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html

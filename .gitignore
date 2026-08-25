@@ -1,0 +1,51 @@
+# Java
+**/target/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+
+# Maven
+.settings/
+**/mvnw*
+.mvn/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Node
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Docker
+docker-compose.override.yml
+**/.dockerignore
+docker-build-log.txt
+docker-up-log.txt
+docker-ps-all.txt
+
+# Environment — never commit real secrets
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Root placeholder Dockerfile (backend/frontend have their own)
+/Dockerfile
+
+# Misc
+*.swp
+*.swo
+*~
